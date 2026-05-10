@@ -42,9 +42,9 @@ const SignInPage = () => {
 
       <div className="relative w-full max-w-md mx-4">
         <div className="backdrop-blur-xl bg-gray-900/50 rounded-3xl shadow-2xl shadow-green-500/5 border border-gray-700/40 px-8 py-10">
-          <h2 className="text-center text-4xl font-bold text-green-500 my-3">Qurbani Hat</h2>
-          <h2 className="text-center text-2xl font-bold text-gray-100">Welcome Back</h2>
-          <p className="text-center text-sm text-gray-400 mt-1 mb-8">
+          <h2 className="text-center text-5xl font-bold text-green-500 my-3">Qurbani Hat</h2>
+          <h2 className="text-center text-3xl font-bold text-gray-100">Welcome Back</h2>
+          <p className="text-center text-gray-400 mt-1 mb-8">
             Log in to manage your animals and orders.
           </p>
 
@@ -57,7 +57,7 @@ const SignInPage = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
+              <label className="block font-medium text-gray-300 mb-1.5">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -75,8 +75,8 @@ const SignInPage = () => {
             {/* Password */}
             <div>
               <div className="flex justify-between items-center mb-1.5">
-                <label className="block text-sm font-medium text-gray-300">Password</label>
-                <Link href="#" className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                <label className="block font-medium text-gray-300">Password</label>
+                <Link href="#" className=" text-emerald-400 hover:text-emerald-300 transition-colors">
                   Forgot Password?
                 </Link>
               </div>
@@ -138,7 +138,7 @@ const SignInPage = () => {
 
           {/* Signup Link */}
           <p className="text-center text-sm text-gray-400 mt-8">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/auth/signup" className="text-emerald-400 font-medium hover:text-emerald-300 underline underline-offset-2 transition-colors">
               Sign Up
             </Link>

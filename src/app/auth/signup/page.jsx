@@ -47,9 +47,9 @@ const SignupPage = () => {
 
       <div className="relative w-full max-w-md mx-4">
         <div className="backdrop-blur-xl bg-gray-900/50 rounded-3xl shadow-2xl shadow-green-500/5 border border-gray-700/40 px-8 py-10">
-          <h2 className="text-center text-4xl font-bold text-green-500 my-3">Qurbani Hat</h2>
-          <h2 className="text-center text-2xl font-bold text-gray-100">Create an Account</h2>
-          <p className="text-center text-sm text-gray-400 mt-1 mb-8">
+          <h2 className="text-center text-5xl font-bold text-green-500 my-3">Qurbani Hat</h2>
+          <h2 className="text-center text-3xl font-bold text-gray-100">Create an Account</h2>
+          <p className="text-center text-gray-400 mt-1 mb-8">
             Sign up to manage your animals and orders.
           </p>
 
@@ -62,7 +62,7 @@ const SignupPage = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Name */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">Full Name</label>
+              <label className="block font-medium text-gray-300 mb-1.5">Full Name</label>
               <div className="relative">
                 <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -79,7 +79,7 @@ const SignupPage = () => {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
+              <label className="block font-medium text-gray-300 mb-1.5">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -96,7 +96,7 @@ const SignupPage = () => {
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1.5">Password</label>
+              <label className="block font-medium text-gray-300 mb-1.5">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
