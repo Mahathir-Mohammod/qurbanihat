@@ -47,7 +47,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-[1600px] mx-auto px-6 h-16 flex items-center justify-between">
 
-        <Link href="/" className="text-2xl font-bold text-emerald-400 tracking-tight hover:text-emerald-300 transition-colors">
+        <Link href="/" className="text-4xl font-bold text-emerald-400 tracking-tight hover:text-emerald-300 transition-colors">
           Qurbani<span className="text-white">Hat</span>
         </Link>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="text-gray-200 text-sm font-medium hover:text-emerald-400 transition-colors"
+              className="text-gray-200 font-medium hover:text-emerald-400 transition-colors"
             >
               {link.label}
             </Link>
