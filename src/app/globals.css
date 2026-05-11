@@ -1,7 +1,18 @@
 @import "tailwindcss";
+
+/* Move HeroUI below the main tailwind import */
 @import "@heroui/styles";
+
+/* Ensure the plugin is loaded after the base layers */
 @plugin "daisyui";
 
-* {
-  font-family: var(--font-playfair), serif;
+@theme {
+  /* If you want to define your fonts properly in v4 */
+  --font-playfair: "Playfair Display", serif;
+}
+
+@layer base {
+  * {
+    font-family: var(--font-playfair), serif;
+  }
 }
