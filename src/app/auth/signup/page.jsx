@@ -1,25 +1,28 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Lock, Eye, EyeOff, User } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, User, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 
 const SignupPage = () => {
   const router = useRouter();
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ name: "", email: "", photoURL: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setError("");
+    setSuccess("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (form.name.length < 3) return setError("Name must be at least 3 characters");
     if (form.password.length < 8) return setError("Password must be at least 8 characters");
     if (!/[A-Z]/.test(form.password)) return setError("Password must contain at least one uppercase letter");
     if (!/[0-9]/.test(form.password)) return setError("Password must contain at least one number");
@@ -29,6 +32,7 @@ const SignupPage = () => {
       name: form.name,
       email: form.email,
       password: form.password,
+      image: form.photoURL || undefined,
     });
     setLoading(false);
 
@@ -45,11 +49,11 @@ const SignupPage = () => {
         <div className="absolute -bottom-32 left-1/4 w-[450px] h-[450px] bg-lime-500/15 rounded-full blur-[110px]" />
       </div>
 
-      <div className="relative w-full max-w-md mx-4">
+      <div className="relative w-full max-w-md mx-4 my-10">
         <div className="backdrop-blur-xl bg-gray-900/50 rounded-3xl shadow-2xl shadow-green-500/5 border border-gray-700/40 px-8 py-10">
-          <h2 className="text-center text-5xl font-bold text-green-500 my-3">Qurbani Hat</h2>
-          <h2 className="text-center text-3xl font-bold text-gray-100">Create an Account</h2>
-          <p className="text-center text-gray-400 mt-1 mb-8">
+          <h2 className="text-center text-4xl font-bold text-green-500 my-3">Qurbani Hat</h2>
+          <h2 className="text-center text-2xl font-bold text-gray-100">Create an Account</h2>
+          <p className="text-center text-sm text-gray-400 mt-1 mb-8">
             Sign up to manage your animals and orders.
           </p>
 
@@ -62,7 +66,7 @@ const SignupPage = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Name */}
             <div>
-              <label className="block font-medium text-gray-300 mb-1.5">Full Name</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1.5">Full Name</label>
               <div className="relative">
                 <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -79,7 +83,7 @@ const SignupPage = () => {
 
             {/* Email */}
             <div>
-              <label className="block font-medium text-gray-300 mb-1.5">Email Address</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1.5">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -94,9 +98,25 @@ const SignupPage = () => {
               </div>
             </div>
 
+            {/* Photo URL */}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-1.5">Photo URL <span className="text-gray-500">(optional)</span></label>
+              <div className="relative">
+                <ImageIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+                <input
+                  type="url"
+                  name="photoURL"
+                  placeholder="https://your-photo-url.com"
+                  value={form.photoURL}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-gray-800/60 border border-gray-600/60 text-gray-100 placeholder:text-gray-500 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/30 transition-all duration-200"
+                />
+              </div>
+            </div>
+
             {/* Password */}
             <div>
-              <label className="block font-medium text-gray-300 mb-1.5">Password</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1.5">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input
@@ -127,7 +147,7 @@ const SignupPage = () => {
               disabled={loading}
               className="w-full py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-base shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
             >
-              {loading ? "Creating Account..." : "Sign Up"}
+              {loading ? "Creating Account..." : "Register"}
             </button>
           </form>
 
