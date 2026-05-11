@@ -12,5 +12,8 @@ export const auth = betterAuth({
         requireEmailVerification: false,
     },
     database: mongodbAdapter(db, { client }),
-    trustedOrigins: ["http://localhost:3000"],
+    trustedOrigins: [
+        "http://localhost:3000",
+        "https://qurbanihat-gamma.vercel.app",
+    ],
 });

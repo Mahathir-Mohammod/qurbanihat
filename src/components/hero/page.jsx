@@ -52,7 +52,7 @@ const HeroSection = () => {
         <div className="mx-auto max-w-7xl px-6 w-full">
           <div className="inline-block max-w-2xl">
             <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-8 py-10">
-              <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">
+              <p className="text-emerald-400 font-semibold uppercase tracking-widest mb-4">
                 Qurbani Hat — Eid ul Adha 2026
               </p>
 
