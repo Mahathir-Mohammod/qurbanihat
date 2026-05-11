@@ -72,12 +72,6 @@ const HeroSection = () => {
                 >
                   Browse Animals
                 </Link>
-                <Link
-                  href="/about"
-                  className="px-7 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-all duration-200"
-                >
-                  Learn More
-                </Link>
               </div>
             </div>
           </div>

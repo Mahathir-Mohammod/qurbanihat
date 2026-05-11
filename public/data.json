@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
-    "image": "https://i.postimg.cc/example-cow1.jpg",
+    "image": "https://i.ibb.co.com/1yG0kYL/shahi.png",
     "category": "Large Animal"
   },
   {
@@ -21,8 +21,8 @@
     "weight": 40,
     "age": 2,
     "location": "Rajshahi",
-    "description": "Strong and healthy goat raised with organic খাবার.",
-    "image": "https://i.postimg.cc/example-goat1.jpg",
+    "description": "Strong and healthy goat raised with organic food.",
+    "image": "https://i.ibb.co.com/fGXnWSY1/goat.png",
     "category": "Medium Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 2,
     "location": "Rangpur",
     "description": "Soft wool sheep with excellent health condition.",
-    "image": "https://i.postimg.cc/example-sheep1.jpg",
+    "image": "https://i.ibb.co.com/S414gpp3/sheep.jpg",
     "category": "Medium Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 5,
     "location": "Dhaka",
     "description": "Elegant horse suitable for riding and racing.",
-    "image": "https://i.postimg.cc/example-horse1.jpg",
+    "image": "https://i.ibb.co.com/Gfq4YR99/horse.jpg",
     "category": "Large Animal"
   },
   {
