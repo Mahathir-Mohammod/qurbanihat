@@ -89,7 +89,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-transparent backdrop-blur-md border-t border-white/10 px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
