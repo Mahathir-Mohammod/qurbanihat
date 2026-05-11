@@ -22,4 +22,8 @@ export const auth = betterAuth({
         "http://localhost:3000",
         "https://qurbanihat-gamma.vercel.app",
     ],
+    // Enable admin plugin for user profile management
+    admin: {
+        enabled: true,
+    },
 });

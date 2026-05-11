@@ -6,3 +6,6 @@ export const authClient = createAuthClient({
 })
 
 export const { signIn, signUp, useSession } = authClient
+
+// Export manage API for user profile updates
+export const { manage } = authClient
