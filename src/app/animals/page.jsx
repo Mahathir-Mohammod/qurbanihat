@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import data from "../../../public/data.json";
@@ -11,6 +11,12 @@ const ITEMS_PER_PAGE = 6;
 const AnimalsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState("default");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const sortedData = [...data].sort((a, b) => {
     if (sortOrder === "low") return a.price - b.price;
@@ -26,6 +32,17 @@ const AnimalsPage = () => {
     setSortOrder(value);
     setCurrentPage(1);
   };
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 rounded-full border-4 border-gray-700 border-t-emerald-400 animate-spin" />
+          <p className="text-gray-400 text-sm">Loading animals...</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-gray-950 pt-24 pb-20 px-6">
@@ -75,7 +92,7 @@ const AnimalsPage = () => {
                   {animal.category}
                 </span>
               </div>
-
+              
               <div className="p-5">
                 <h3 className="text-white font-semibold text-xl mb-1 truncate">
                   {animal.name}
