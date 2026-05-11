@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import data from "../../../public/data.json";
 import { MapPin, Weight, Tag, ChevronLeft, ChevronRight, ArrowUpDown } from "lucide-react";
+import { useTrail, animated } from "@react-spring/web";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -27,6 +28,12 @@ const AnimalsPage = () => {
   const totalPages = Math.ceil(sortedData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentAnimals = sortedData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const trail = useTrail(currentAnimals.length, {
+    from: { opacity: 0, transform: "translateY(30px)" },
+    to: { opacity: isLoading ? 0 : 1, transform: isLoading ? "translateY(30px)" : "translateY(0px)" },
+    config: { tension: 200, friction: 20 },
+  });
 
   const handleSort = (value) => {
     setSortOrder(value);
@@ -76,59 +83,59 @@ const AnimalsPage = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentAnimals.map((animal) => (
-            <div
-              key={animal.id}
+          {trail.map((style, index) => (
+            <animated.div
+              key={currentAnimals[index].id}
+              style={style}
               className="bg-gray-900 border border-white/10 rounded-2xl overflow-hidden hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 group">
-
               <div className="relative h-52 bg-gray-800 overflow-hidden">
                 <Image
-                  src={animal.image}
-                  alt={animal.name}
+                  src={currentAnimals[index].image}
+                  alt={currentAnimals[index].name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <span className="absolute top-3 left-3 bg-emerald-500/90 text-white text-xs font-semibold px-2.5 py-1 rounded-lg">
-                  {animal.category}
+                  {currentAnimals[index].category}
                 </span>
               </div>
-              
+
               <div className="p-5">
                 <h3 className="text-white font-semibold text-xl mb-1 truncate">
-                  {animal.name}
+                  {currentAnimals[index].name}
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {animal.description}
+                  {currentAnimals[index].description}
                 </p>
 
                 <div className="flex flex-col gap-2 mb-4">
                   <div className="flex items-center gap-2 text-gray-400 text-sm">
                     <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-                    {animal.location}
+                    {currentAnimals[index].location}
                   </div>
                   <div className="flex items-center gap-2 text-gray-400 text-sm">
                     <Weight className="w-3.5 h-3.5 text-emerald-400" />
-                    {animal.weight} kg
+                    {currentAnimals[index].weight} kg
                   </div>
                   <div className="flex items-center gap-2 text-gray-400 text-sm">
                     <Tag className="w-3.5 h-3.5 text-emerald-400" />
-                    {animal.breed}
+                    {currentAnimals[index].breed}
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <span className="text-emerald-400 font-bold text-lg">
-                    ৳{animal.price.toLocaleString()}/=
+                    ৳{currentAnimals[index].price.toLocaleString()}/=
                   </span>
                   <Link
-                    href={`/animals/${animal.id}`}
+                    href={`/animals/${currentAnimals[index].id}`}
                     className="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-medium hover:bg-emerald-500 hover:text-white transition-all duration-200"
                   >
                     View Details
                   </Link>
                 </div>
               </div>
-            </div>
+            </animated.div>
           ))}
         </div>
 
