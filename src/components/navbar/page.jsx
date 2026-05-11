@@ -7,6 +7,27 @@ import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { LogOut, Menu, X } from "lucide-react";
 
+const Avatar = ({ user }) => {
+  if (user?.image) {
+    return (
+      <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-emerald-400">
+        <Image
+          src={user.image}
+          alt={user.name}
+          width={36}
+          height={36}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    );
+  }
+  return (
+    <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center text-white font-semibold text-sm">
+      {user?.name?.charAt(0).toUpperCase()}
+    </div>
+  );
+};
+
 const Navbar = () => {
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
@@ -21,27 +42,6 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     { label: "All Animals", href: "/animals" },
   ];
-
-  const Avatar = () => {
-    if (session?.user?.image) {
-      return (
-        <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-emerald-400">
-          <Image
-            src={session.user.image}
-            alt={session.user.name}
-            width={36}
-            height={36}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      );
-    }
-    return (
-      <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center text-white font-semibold text-sm">
-        {session?.user?.name?.charAt(0).toUpperCase()}
-      </div>
-    );
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
@@ -69,10 +69,10 @@ const Navbar = () => {
           ) : session ? (
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
-                <Avatar />
-                <span className="text-gray-200 text-sm font-medium">
+                <Avatar user={session?.user} />
+                <Link href="/my-profile" className="text-gray-200 text-sm font-medium hover:text-emerald-400 transition-colors">
                   {session.user.name}
-                </span>
+                </Link>
               </div>
               <button
                 onClick={handleLogout}
@@ -124,10 +124,14 @@ const Navbar = () => {
             ) : session ? (
               <>
                 <div className="flex items-center gap-2">
-                  <Avatar />
-                  <span className="text-gray-300 text-sm font-medium">
+                  <Avatar user={session?.user} />
+                  <Link
+                    href="/my-profile"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-gray-300 text-sm font-medium hover:text-emerald-400 transition-colors"
+                  >
                     {session.user.name}
-                  </span>
+                  </Link>
                 </div>
                 <button
                   onClick={handleLogout}
