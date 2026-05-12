@@ -1,0 +1,66 @@
+[
+  {
+    "category": "General Questions",
+    "questions": [
+      {
+        "question": "What is this platform about?",
+        "answer": "Our platform connects buyers with verified livestock sellers, providing a seamless way to purchase animals for Qurbani/ Eid al-Adha. We ensure quality, transparency, and ethical practices throughout the process."
+      },
+      {
+        "question": "How do I place an order?",
+        "answer": "Simply browse our collection of animals, select your preferred choice, and proceed to checkout. You can choose between pickup or delivery options based on your location."
+      },
+      {
+        "question": "What payment methods are accepted?",
+        "answer": "We accept various payment methods including credit/ debit cards, mobile banking (bKash, Nagad), and bank transfers. All transactions are secure and encrypted."
+      }
+    ]
+  },
+  {
+    "category": "Animal Selection & Quality",
+    "questions": [
+      {
+        "question": "How do you ensure animal quality?",
+        "answer": "All our animals are sourced from verified farms and undergo strict health checks. We provide detailed information about each animal's breed, age, weight, and health status."
+      },
+      {
+        "question": "Can I inspect the animal before purchase?",
+        "answer": "Yes! You can visit our farm or partner locations to personally inspect the animals. We also provide live video calls for remote customers."
+      },
+      {
+        "question": "What happens if the animal gets sick?",
+        "answer": "We provide a health guarantee for all animals. If any health issues arise within the specified period, we offer replacement or full refund."
+      }
+    ]
+  },
+  {
+    "category": "Delivery & Pickup",
+    "questions": [
+      {
+        "question": "What are the delivery options?",
+        "answer": "We offer doorstep delivery, farm pickup, and designated collection points. Delivery is available across major cities in Bangladesh."
+      },
+      {
+        "question": "How much does delivery cost?",
+        "answer": "Delivery costs vary based on location and animal size. Free delivery is available for orders within Dhaka city limits."
+      },
+      {
+        "question": "What is the delivery timeline?",
+        "answer": "Standard delivery takes 2-3 days. For Eid season, we recommend ordering at least one week in advance to ensure timely delivery."
+      }
+    ]
+  },
+  {
+    "category": "Returns & Refunds",
+    "questions": [
+      {
+        "question": "What is your refund policy?",
+        "answer": "We offer full refunds within 24 hours of purchase if you're unsatisfied. For delivery issues, refunds are processed within 5-7 business days."
+      },
+      {
+        "question": "Can I cancel my order?",
+        "answer": "Yes, you can cancel your order before the animal is dispatched. Contact our support team immediately for assistance."
+      }
+    ]
+  }
+]

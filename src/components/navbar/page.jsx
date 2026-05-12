@@ -41,6 +41,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "All Animals", href: "/animals" },
+    { label: "FAQ", href: "/faq" },
   ];
 
   return (
