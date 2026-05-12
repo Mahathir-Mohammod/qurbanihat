@@ -20,7 +20,6 @@ export default function GlobalNotFound() {
             </a>
           </div>
         </main>
-        <Footer />
       </body>
     </html>
   );
