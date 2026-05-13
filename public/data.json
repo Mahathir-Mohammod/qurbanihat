@@ -61,21 +61,21 @@
     "age": 1,
     "location": "Khulna",
     "description": "Cute and friendly rabbit perfect for home pets.",
-    "image": "https://i.postimg.cc/example-rabbit1.jpg",
+    "image": "https://i.ibb.co.com/tTYYyBYR/rabit.jpg",
     "category": "Small Animal"
   },
   {
     "id": 6,
-    "name": "Golden Retriever",
-    "type": "Dog",
-    "breed": "Golden Retriever",
-    "price": 65000,
-    "weight": 30,
+    "name": "Spotted Deer",
+    "type": "Deer",
+    "breed": "Chital",
+    "price": 95000,
+    "weight": 70,
     "age": 2,
-    "location": "Chattogram",
-    "description": "Friendly and intelligent family dog.",
-    "image": "https://i.postimg.cc/example-dog1.jpg",
-    "category": "Pet Animal"
+    "location": "Sundarbans",
+    "description": "Graceful deer with beautiful spotted skin.",
+    "image": "https://i.ibb.co.com/gLmNNFYB/deer.jpg",
+    "category": "Wild Animal"
   },
   {
     "id": 7,
@@ -87,7 +87,7 @@
     "age": 1,
     "location": "Sylhet",
     "description": "Fluffy Persian cat with calm personality.",
-    "image": "https://i.postimg.cc/example-cat1.jpg",
+    "image": "https://i.ibb.co.com/qL2cnV3w/per-cat.jpg",
     "category": "Pet Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 1,
     "location": "Barishal",
     "description": "Healthy duck raised naturally in village farms.",
-    "image": "https://i.postimg.cc/example-duck1.jpg",
+    "image": "https://i.ibb.co.com/5pkRYHW/duck.png",
     "category": "Bird"
   },
   {
@@ -113,7 +113,7 @@
     "age": 1,
     "location": "Cumilla",
     "description": "Egg producing chicken with strong immunity.",
-    "image": "https://i.postimg.cc/example-chicken1.jpg",
+    "image": "https://i.ibb.co.com/PfxJyYK/Layer-Chicken.jpg",
     "category": "Bird"
   },
   {
@@ -126,7 +126,7 @@
     "age": 1,
     "location": "Narayanganj",
     "description": "Beautiful fancy pigeon popular among bird lovers.",
-    "image": "https://i.postimg.cc/example-pigeon1.jpg",
+    "image": "https://i.ibb.co.com/DfZLXwsV/Fancy-Pigeon.jpg",
     "category": "Bird"
   },
   {
@@ -139,60 +139,60 @@
     "age": 4,
     "location": "Pabna",
     "description": "Strong buffalo suitable for dairy production.",
-    "image": "https://i.postimg.cc/example-buffalo1.jpg",
+    "image": "https://i.ibb.co.com/9mgpW3Nf/Deshi-Buffalo.jpg",
     "category": "Large Animal"
   },
-  {
+ {
     "id": 12,
-    "name": "Macaw Parrot",
-    "type": "Parrot",
-    "breed": "Blue and Gold Macaw",
-    "price": 85000,
-    "weight": 2,
-    "age": 3,
-    "location": "Dhaka",
-    "description": "Colorful and intelligent talking parrot.",
-    "image": "https://i.postimg.cc/example-parrot1.jpg",
+    "name": "Native Turkey",
+    "type": "Bird",
+    "breed": "Heritage",
+    "price": 4500,
+    "weight": 8,
+    "age": 1,
+    "location": "Mymensingh",
+    "description": "Large, healthy bird with lean meat, perfect for family feasts.",
+    "image": "https://i.ibb.co.com/JF3G17kB/Native-Turkey.jpg",
     "category": "Bird"
   },
   {
     "id": 13,
-    "name": "Siberian Husky",
-    "type": "Dog",
-    "breed": "Husky",
-    "price": 90000,
-    "weight": 28,
-    "age": 2,
+    "name": "Quail",
+    "type": "Bird",
+    "breed": "Japanese Quail",
+    "price": 150,
+    "weight": 0.25,
+    "age": 1,
     "location": "Gazipur",
-    "description": "Energetic dog with attractive blue eyes.",
-    "image": "https://i.postimg.cc/example-husky1.jpg",
-    "category": "Pet Animal"
+    "description": "Small but highly nutritious birds, raised in a controlled environment.",
+    "image": "https://i.ibb.co.com/tpLR38Wz/Quail.jpg",
+    "category": "Bird"
   },
   {
     "id": 14,
-    "name": "Bengal Tiger Cub",
-    "type": "Tiger",
-    "breed": "Royal Bengal",
-    "price": 1500000,
-    "weight": 90,
+    "name": "Peking Duck",
+    "type": "Duck",
+    "breed": "Peking",
+    "price": 2500,
+    "weight": 4,
     "age": 1,
-    "location": "Khulna",
-    "description": "Rare Bengal tiger cub from protected breeding.",
-    "image": "https://i.postimg.cc/example-tiger1.jpg",
-    "category": "Wild Animal"
+    "location": "Jessore",
+    "description": "Premium quality meat duck, known for its tender texture and fat content.",
+    "image": "https://i.ibb.co.com/WWzKJx0W/Peking-Duck.jpg",
+    "category": "Bird"
   },
   {
     "id": 15,
-    "name": "Spotted Deer",
-    "type": "Deer",
-    "breed": "Chital",
-    "price": 95000,
-    "weight": 70,
-    "age": 2,
-    "location": "Sundarbans",
-    "description": "Graceful deer with beautiful spotted skin.",
-    "image": "https://i.postimg.cc/example-deer1.jpg",
-    "category": "Wild Animal"
+    "name": "Broiler Chicken",
+    "type": "Chicken",
+    "breed": "Cobb 500",
+    "price": 450,
+    "weight": 2.5,
+    "age": 1,
+    "location": "Tangail",
+    "description": "Fast-growing meat chicken, fresh and ready for poultry markets.",
+    "image": "https://i.ibb.co.com/wZcfvf0g/Broiler-Chicken.jpg",
+    "category": "Bird"
   },
   {
     "id": 16,
@@ -204,7 +204,7 @@
     "age": 6,
     "location": "Cox's Bazar",
     "description": "Large camel imported for farm and tourism use.",
-    "image": "https://i.postimg.cc/example-camel1.jpg",
+    "image": "https://i.ibb.co.com/Jjx5xdt1/Farm-Camel.jpg",
     "category": "Large Animal"
   }
 ]
